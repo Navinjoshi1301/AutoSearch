@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search Array</title>
-    <script>
-      var topicsToSearch = [
-        "Artificial Intelligence",
-        "Climate Change",
-        "Space Exploration",
-        "Renewable Energy",
-        "Global Economy",
-        "Cybersecurity",
-        "Mental Health Awareness",
-        "Sustainable Agriculture",
-        "Political Reform",
-        "Gender Equality",
-        "Robotics",
-        "Biotechnology",
-        "Virtual Reality",
-        "Internet of Things",
-        "Data Privacy",
-        "Natural Disasters",
-        "Clean Water Access",
-        "Ocean Conservation",
-        "Healthcare Innovation",
-        "Digital Transformation",
-        "Social Justice",
-        "Educational Technology",
-        "Urban Planning",
-        "Cultural Diversity",
-        "Economic Development",
-        "Humanitarian Aid",
-        "Wildlife Conservation",
-        "Space Tourism",
-        "Clean Energy Solutions",
-        "Renewable Resources",
-      ]; // 30 real topics array
-      var index = 0;
-      var intervalId;
 
-      function searchNextTopic() {
-        var intervalId = setInterval(function () {
-          if (index < topicsToSearch.length) {
-            var topic = topicsToSearch[index];
-            // Construct the search query URL for Bing
-            var searchUrl =
-              "https://www.bing.com/search?q=" +
-              encodeURIComponent(topic) +
-              "&cvid=dbbd90a4c82047c699c62747e6657d6d&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDExMzVqMGoxqAIAsAIA&FORM=ANNTA1&PC=U531";
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Array</title>
+  <script>
+    var topicsToSearch = [
+      "Quantum Computing",
+      "Genetic Engineering",
+      "Augmented Reality",
+      "Blockchain Technology",
+      "Mental Well-being",
+      "Poverty Alleviation",
+      "Artificial General Intelligence",
+      "Biodiversity Conservation",
+      "Sustainable Transportation",
+      "Renewable Infrastructure",
+      "Green Technology",
+      "Disaster Resilience",
+      "Universal Basic Income",
+      "Social Entrepreneurship",
+      "Digital Literacy",
+      "Renewable Fuels",
+      "Environmental Sustainability",
+      "Biomedical Research",
+      "Space Colonization",
+      "Precision Agriculture",
+      "Remote Work Solutions",
+      "Cultural Preservation",
+      "Renewable Materials",
+      "Smart Cities",
+      "Green Architecture",
+      "Future of Work",
+      "Personalized Medicine",
+      "Alternative Education",
+      "Clean Air Initiatives",
+      "Sustainable Fashion"
+    ]; // 30 real topics array
+    var index = 0;
+    var intervalId;
 
-            // Open a new tab/window with the search query URL
-            window.open(searchUrl, "_blank");
+    function searchNextTopic() {
+      var intervalId = setInterval(function () {
+        if (index < topicsToSearch.length) {
+          var topic = topicsToSearch[index];
+          // Construct the search query URL for Bing
+          var searchUrl =
+            "https://www.bing.com/search?q=" +
+            encodeURIComponent(topic) +
+            "&cvid=dbbd90a4c82047c699c62747e6657d6d&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDExMzVqMGoxqAIAsAIA&FORM=ANNTA1&PC=U531";
 
-            index++;
-          } else {
-            clearInterval(intervalId); // Stop the interval when all topics have been searched
-          }
-        }, 10000); // 5 seconds interval
-      }
-    </script>
-  </head>
+          // Open a new tab/window with the search query URL
+          window.open(searchUrl);
 
-  <body>
-    <button onclick="searchNextTopic()">Start Search</button>
-  </body>
+          index++;
+        } else {
+          clearInterval(intervalId); // Stop the interval when all topics have been searched
+        }
+      }, 15000); // 5 seconds interval
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="searchNextTopic()">Start Search</button>
+</body>
+
 </html>
